@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        a=parseInt(prompt("Enter the first number"))
+        b=parseInt(prompt("Enter the second number"))
+        if(a>b)
+        {
+            document.write("<span>"+a+"</span> is greater than<span>"+b+"</span>")
+        }
+        else if(a<b)
+        {
+            document.write("<span>"+b+"</span> is greater than<span>"+a+"</span>")
+        }
+        else
+        {
+            document.write("<span>"+a+"</span> is equal to<span>"+b+"</span>")
+        }
+    </script> -->
+    <style>
+        span{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+    <!-- <script src="myjavascript.js"></script> -->
+</head>
+<body>
+    <h2>Greater number Amoung Two</h2>
+    <hr>
+    <span id="sp"></span>
+</body>
+<script>
+    let a=parseInt(prompt("Enter the first number"))
+    let b=parseInt(prompt("Enter the second number"))
+    var data=document.getElementById("sp")
+    if(a>b)
+    {
+        data.innerHTML=a+" is greater than "+b;
+    }
+    else if(a<b)
+    {
+        data.innerHTML=b+" is greater than "+a;
+    }
+    else
+    {
+        data.innerHTML=a+" is equal to "+b;
+    }
+</script>
+</html>
