@@ -13,9 +13,11 @@
        <br>
         <input type="number" id="num">
         <br>
-        <span id="sp">
+        <span id="sp"></span>
+        <br>
+        <span>
         <button onclick="checkPrime()">Prime</button>
-        <button onclick="checkFactor()">Factor</button>
+        <button onclick="Factorial()">Factor</button>
         <button onclick="checkPerfect()">Perfect</button>
         <br>
         </span>
@@ -24,36 +26,29 @@
    <script>
           function checkPrime(){
             var num=parseInt(document.getElementById("num").value);
-            var i=0;
+            var j=0;
             for(var i=2;i<num;i++){
                  if(num%i==0){
-                      i=1;
-                      break;
+                      j=1;
+                      
                  }
             }
-            if(i==0){
+            if(j==0){
                  document.getElementById("sp").innerHTML=num+" is prime number";
             }
             else{
                  document.getElementById("sp").innerHTML=num+" is not prime number";
             }
           }
-          function checkFactor(){
-            var num=parseInt(document.getElementById("num").value);
-            var flag=0;
-            for(var i=2;i<num;i++){
-                 if(num%i==0){
-                      i=1;
-                      break;
-                 }
+            function Factorial(){
+                var num=parseInt(document.getElementById("num").value);
+                var fact=1;
+                for(var i=1;i<=num;i++){
+                     fact=fact*i;
+                }
+                document.getElementById("sp").innerHTML="Factorial of "+num+" is "+fact;
             }
-            if(i==0){
-                 document.getElementById("sp").innerHTML=num+"is factor";
-            }
-            else{
-                 document.getElementById("sp").innerHTML=num+" is not factor";
-            }
-          }
+          
             function checkPerfect(){
                 var num=parseInt(document.getElementById("num").value);
                 var sum=0;
@@ -68,6 +63,6 @@
                 else{
                      document.getElementById("sp").innerHTML=num+" is not perfect number";
                 }
-            } 
+            }
    </script>
 </html>
