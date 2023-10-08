@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            color: #000;
+            background-color: greenyellow;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Work According to Notification</h2>
+    <hr>
+</body>
+<script>
+    if("Notification" in window){
+       {
+        console.log("Notification is allowed");
+        setInterval(function(){
+            notifyProcess();
+            }, 10000);
+        }
+       }
+    
+    else
+    {
+        console.log("Notification is not supported");
+    }
+    function notifyProcess(){
+        new Notification("Submit the Project Report at 10:00am");
+        new Notification("Meeting will start at 10:30am");
+    }
+</script>
+</html>
