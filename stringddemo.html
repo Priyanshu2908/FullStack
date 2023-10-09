@@ -26,10 +26,35 @@
     <br>
     <span id="sp"></span>
     <br><br>
-    <input type="button" value="Processing" onclick="process()">
+    <span id="spp"></span>
+    <br><br>
+    <input type="button" value="Processing" onclick="process()"/>
+    <br>
+    <input type="button" value="PalindromeCheck" onclick="palin()"/>
    </center>
 </body>
 <script>
+    function palin()
+    {
+        var d=document.getElementById("t1").value;  
+        var len=d.length;
+        d=d.toUpperCase();
+        var rev="",i;
+        for(i=len-1;i>=0;i--)
+        {
+            var p=d.charAt(i);
+            rev=rev+p;
+        }
+        if(rev==d)
+        {
+            document.getElementById("spp").innerHTML="Palindrome";
+        }
+        else
+        {
+        
+            document.getElementById("spp").innerHTML="Not Palindrome";
+        }
+    }
    
 
     function process(){
@@ -46,7 +71,7 @@
 
         }
         c=c+1; //Space count  will convert into word
-        sp.innerHTML="Total number of words"+c;
+        sp2.innerHTML="Total number of words"+c;
     }
     
     
