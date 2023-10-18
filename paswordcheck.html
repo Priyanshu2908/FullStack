@@ -18,7 +18,6 @@
     </style>
 </head>
 <body>
-    <center>
     <h2>Password Verification</h2>
     <hr>
     <h3>You Have 3 Attempts</h3>
@@ -30,26 +29,24 @@
     <br>
     <span id="spp"></span>
     <br>
-    <input id="t2" type="button" value="Process" class="btn btn-success" onclick="Process()">
-</center>
+    <input type="button" value="Process" class="btn btn-success" onclick="Process()">
 </body>
 <script>
     var d=document.getElementById("t1").innerHTML
-    var f=3;
+    var d=3;
     function Process(){
         var d=document.getElementById("t1").value;
         if(d=="Admin"){
             document.getElementById("sp").innerHTML="Correct Password";
         }
         else{
-            f--;
+            d--;
             document.getElementById("sp").innerHTML="Wrong Password";
-            document.getElementById("spp").innerHTML="You Have "+f+" Attempts Left";
-            if(f==0){
+            document.getElementById("spp").innerHTML="You Have "d+" Attempts Left";
+            if(d==0){
                 document.getElementById("sp").innerHTML="You Have No Attempts Left";
                 document.getElementById("spp").innerHTML="Please Try Again Later";
                 document.getElementById("t1").disabled=true;
-                document.getElementById("t2").disabled=true;
             }
         }
     }
